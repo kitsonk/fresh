@@ -100,6 +100,10 @@ export class EsbuildBuilder implements Builder {
         write: false,
         metafile: true,
 
+        loader: {
+          ".ttf": "file",
+        },
+
         plugins: [
           devClientUrlPlugin(opts.basePath),
           buildIdPlugin(opts.buildID),
